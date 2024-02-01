@@ -1,7 +1,7 @@
 "use client";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { Button } from "../ui/button";
 import { cn, generateSlug } from "@/lib/utils";
 import { Icons } from "../icons";
@@ -11,6 +11,7 @@ import { removeImageAction } from "@/actions/form-actions";
 import { toast } from "react-toastify";
 import { TProductCategory } from "@/types";
 import { createCategory } from "@/actions/category.action";
+import { Input } from "../ui/input";
 
 const CategoryCreationForm = () => {
   const [imageUrl, setImageUrl] = useState("");

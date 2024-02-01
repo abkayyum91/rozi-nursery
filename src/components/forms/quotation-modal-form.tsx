@@ -2,12 +2,13 @@
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TGetQuoteSchema, getQuoteSchema } from "@/lib/zod-schema";
 import { TProduct, TQuotation } from "@/types";
 import { sendQuotationAction } from "@/actions/quotation.action";
 import { toast } from "react-toastify";
+import { Input } from "../ui/input";
 
 interface ModalGetQuoteFormProps {
   product?: TProduct;

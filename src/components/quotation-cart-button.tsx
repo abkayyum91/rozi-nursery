@@ -17,7 +17,7 @@ const QuotationCartButton = () => {
       const cartItems: CartItem[] = JSON.parse(items);
       dispatch(addItemFromLocalStorage(cartItems));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="bg-muted flex justify-center items-center h-9 w-9 rounded-full relative">

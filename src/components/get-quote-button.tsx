@@ -1,12 +1,13 @@
 "use client";
 import { ChangeEvent, useState } from "react";
 import { Button } from "./ui/button";
-import { Input, Label, Modal, QuotationModalForm } from ".";
+import { Label, Modal, QuotationModalForm } from ".";
 import { Icons } from "./icons";
 import { cn, getDiscount } from "@/lib/utils";
 import Image from "next/image";
 import { TProduct } from "@/types";
 import { ToastContainer } from "react-toastify";
+import { Input } from "./ui/input";
 
 interface GetQuoteButtonProps {
   data?: TProduct;

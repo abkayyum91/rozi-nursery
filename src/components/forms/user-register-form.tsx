@@ -2,11 +2,12 @@
 import { TRegisterUserSchema, registerUserSchema } from "@/lib/zod-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { registerUser } from "@/actions/form-actions";
 import { useState } from "react";
+import { Input } from "../ui/input";
 
 const UserRegisterForm = () => {
   const [toast, setToast] = useState({flag: false, msg: ""});

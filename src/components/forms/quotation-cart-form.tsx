@@ -2,7 +2,7 @@
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { TGetQuoteSchema, getQuoteSchema } from "@/lib/zod-schema";
 import { TQuotation } from "@/types";
@@ -10,6 +10,7 @@ import { CartItem, clearCart } from "@/redux-store/slice/quotation-cart-slice";
 import { useAppDispatch, useAppSelector } from "@/hooks/redux-toolkit-hook";
 import { toast } from "react-toastify";
 import { sendQuotationAction } from "@/actions/quotation.action";
+import { Input } from "../ui/input";
 
 const QuotationCartForm = () => {
   const cartItems: CartItem[] = useAppSelector((state) => state.cart.cartItem);

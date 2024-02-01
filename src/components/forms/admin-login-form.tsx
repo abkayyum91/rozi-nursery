@@ -1,7 +1,7 @@
 "use client";
 import { TLoginUserSchema, loginUserSchema } from "@/lib/zod-schema";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { Button, buttonVariants } from "../ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { Icons } from "../icons";
 import { getUserRole } from "@/actions/form-actions";
 import { ToastContainer, toast } from 'react-toastify';
+import { Input } from "../ui/input";
 
 
 const AdminLoginForm = () => {

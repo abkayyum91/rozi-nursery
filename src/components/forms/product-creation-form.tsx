@@ -1,7 +1,7 @@
 "use client";
 
 import Select from "react-select";
-import { Input, Label } from "..";
+import { Label } from "..";
 import { Button } from "../ui/button";
 import { productTypeOptionsConfig, tagOptionsConfig } from "@/config/options";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Icons } from "../icons";
 import { createProduct } from "@/actions/product.action";
 import { toast } from "react-toastify";
+import { Input } from "../ui/input";
 
 interface ProductCreationFormProps {
   categories: TProductCategory[];
