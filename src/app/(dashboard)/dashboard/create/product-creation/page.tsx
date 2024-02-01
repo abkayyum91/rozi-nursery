@@ -1,5 +1,4 @@
 import { getCategories } from "@/actions/category.action";
-import { createProduct } from "@/actions/product.action";
 import {
   DashboardHeader,
   DashboardShell,
@@ -22,7 +21,7 @@ const CreateProductPage = async() => {
 
       <div className="grid">
         <div className="w-full sm:max-w-lg p-4 border-2 rounded-md border-dashed bg-muted text-muted-foreground">
-          <ProductCreationForm formAction={createProduct} categories={categories} />
+          <ProductCreationForm categories={categories} />
         </div>
       </div>
       <ToastContainer/>
