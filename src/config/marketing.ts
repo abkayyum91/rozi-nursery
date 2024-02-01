@@ -12,6 +12,7 @@ export const marketingConfig: TMarketingConfig = {
         {
           head: "TRENDING PLANTS",
           headSlug: "trending-plants",
+          disabled: true,
           subLinks: [
             { title: "Gift Plants", slug: "/category/gift-plants" },
             { title: "Oxygen Plants", slug: "/category/oxygen-plants" },
@@ -27,6 +28,7 @@ export const marketingConfig: TMarketingConfig = {
         {
           head: "PLANTS BY TYPE",
           headSlug: "plants-by-type",
+          disabled: true,
           subLinks: [
             { title: "Climbers adn Creepers", slug: "/category/climbers-and-creepers"},
             { title: "Herbs Plants", slug: "/category/herbs-plants" },
@@ -40,6 +42,7 @@ export const marketingConfig: TMarketingConfig = {
         {
           head: "PLANTS BY LOCATION",
           headSlug: "plants-by-location",
+          disabled: true,
           subLinks: [
             { title: "Indoor Plants", slug: "/category/indoor-plants" },
             { title: "Outdoor Plants", slug: "/category/outdoor-plants" },
@@ -50,6 +53,7 @@ export const marketingConfig: TMarketingConfig = {
         {
           head: "PLANTS BY SEASON",
           headSlug: "plants-by-season",
+          disabled: true,
           subLinks: [
             { title: "Winter Plants", slug: "/category/winter-plants" },
             { title: "Summer Plants", slug: "/category/summer-plants" },
@@ -60,6 +64,7 @@ export const marketingConfig: TMarketingConfig = {
         {
           head: "FOLIAGE PLANTS",
           headSlug: "foliage-plants",
+          disabled: true,
           subLinks: [
             { title: "Money Plants", slug: "/category/money-plants" },
             { title: "Snake Plants", slug: "/category/snake-plants" },

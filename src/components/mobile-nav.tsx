@@ -74,9 +74,9 @@ const MobileNav = ({ items, closeMenu, children }: TMobileNavProps) => {
                           }
                         >
                           <Link
-                            href="#"
+                            href={cat.disabled? "#" : cat.headSlug}
                             className="capitalize text-base font-medium"
-                            // onClick={() => closeMenu()}
+                            onClick={() => closeMenu()}
                           >
                             {cat.head}
                           </Link>

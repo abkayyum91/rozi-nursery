@@ -16,6 +16,7 @@ export type TMarketingNav = TLink & {
   categories?: {
     head: string;
     headSlug: string;
+    disabled?: boolean;
     subLinks?: TLink[]
   }[]
 }
