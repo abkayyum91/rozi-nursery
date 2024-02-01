@@ -1,21 +1,17 @@
 import { SideNav, MainNav, UserAccountNav } from "@/components";
 import { dashboardConfig } from "@/config/dashboard";
-import { authOptions } from "@/lib/auth";
-import { getServerSession } from "next-auth";
 
 type DashboardLayoutProps = {
     children: React.ReactNode;
 }
 
 const DashboardLayout = async({children}: DashboardLayoutProps) => {
-    const session = await getServerSession(authOptions);
-
   return (
     <div className="flex flex-col min-h-screen space-y-6">
         <header className="sticky top-0 z-40 border-b bg-background">
             <div className="container py-3 flex justify-between items-center">
                 <MainNav items={dashboardConfig.mainNav}/>
-                <UserAccountNav items={dashboardConfig.sideNav} user={session?.user?.name} email={session?.user?.email}/>
+                <UserAccountNav items={dashboardConfig.sideNav} />
             </div>
         </header>
         <div className="container flex-1 grid gap-12 lg:grid-cols-[200px_1fr]">

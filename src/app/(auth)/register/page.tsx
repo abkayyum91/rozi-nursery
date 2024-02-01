@@ -35,7 +35,7 @@ export default function RegisterPage() {
         </div>
         <UserRegisterForm/>
         <div className="flex justify-center items-center py-2 text-sm text-muted-foreground">
-            Already have account?<Link href="/login" className="text-base text-primary pl-2"> Login</Link>
+            Already have account?<Link href="#" className="text-base text-primary pl-2"> Login</Link>
         </div>
       </div>
     </div>

@@ -9,15 +9,14 @@ import {
 import { Icons } from "./icons";
 import Link from "next/link";
 import { TSideNav } from "@/types";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 interface UserAccountNavProps {
   items: TSideNav[];
-  user: string | null | undefined;
-  email: string | null | undefined;
 }
 
-const UserAccountNav = ({ items, user, email }: UserAccountNavProps) => {
+const UserAccountNav = ({ items}: UserAccountNavProps) => {
+  const {data: session, status} = useSession()
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="h-8 w-8 rounded-full bg-accent text-accent-foreground flex justify-center items-center">
@@ -27,10 +26,10 @@ const UserAccountNav = ({ items, user, email }: UserAccountNavProps) => {
         <div className="flex justify-start items-center p-2">
           <div className="grid gap-1 leading-none">
             <p className="text-sm uppercase font-medium text-muted-foreground leading-none">
-              {user}
+              {session?.user?.name}
             </p>
             <p className="w-[200px] text-sm lowercase text-muted-foreground truncate">
-              {email}
+              {session?.user?.email}
             </p>
           </div>
         </div>

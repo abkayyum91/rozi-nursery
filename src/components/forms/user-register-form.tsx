@@ -6,30 +6,30 @@ import { Label } from "..";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { registerUser } from "@/actions/form-actions";
-import { useState } from "react";
 import { Input } from "../ui/input";
+import { ToastContainer, toast } from "react-toastify";
 
 const UserRegisterForm = () => {
-  const [toast, setToast] = useState({flag: false, msg: ""});
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset
   } = useForm<TRegisterUserSchema>({
     resolver: zodResolver(registerUserSchema),
   });
 
   const processForm: SubmitHandler<TRegisterUserSchema> = async(data) => {
     const res = await registerUser(data)
-    setToast({flag: res?.success!, msg: res?.message!})
+    if (!res?.success) return toast.error(res?.message, {theme: "colored"});
+    toast.success(res.message, {theme: "colored"})
+    reset();
   };
 
   return (
     <form onSubmit={handleSubmit(processForm)} className="grid py-3 px-2">
-      {/* message */}
-      {toast.msg && <div className={`${toast.flag? "bg-primary/90 text-primary-foreground": "bg-destructive/90 text-destructive-foreground"} p-4 mb-2 rounded-md`}>
-       <p className="text-xs font-medium">{toast.msg}</p>
-      </div>}
+      {/* toast message */}
+      <ToastContainer position="top-center"/>
       {/* name input */}
       <div className="flex flex-col">
         <Label labelText="Name" forText="Name" />
